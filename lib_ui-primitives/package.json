@@ -1,0 +1,22 @@
+{
+    "name": "lib_ui-primitives",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@emotion/native": "^11.10.0",
+        "@emotion/react": "^11.10.0",
+        "lodash.kebabcase": "^4.1.1",
+        "styled-components": "^5.3.5"
+    },
+    "peerDependencies": {
+        "react": "18.0.0",
+        "react-native": "0.69.3"
+    }
+}

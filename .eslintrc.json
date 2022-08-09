@@ -1,0 +1,87 @@
+{
+    "extends": ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
+    "plugins": ["react", "react-hooks", "no-only-tests"],
+    "parser": "babel-eslint",
+    "root": true,
+    "globals": {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis
+        "globalThis": false // means it is not writeable
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "allowImportExportEverywhere": true,
+        "sourceType": "module"
+    },
+    "env": {
+        "es2017": true,
+        "browser": true,
+        "node": true,
+        "jquery": false,
+        "mocha": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".native.js", ".ios.js", ".browser.js", ".android.js"]
+            }
+        },
+        "import/ignore": ["react-native", "dompurify", "polyfills"],
+        "react": {
+            "version": "17.0.1"
+        }
+    },
+    "rules": {
+        "comma-dangle": "off",
+        "quotes": [2, "single", "avoid-escape"],
+        "no-console": 1,
+        "camelcase": 0,
+        "array-bracket-spacing": [1, "never"],
+        "space-in-parens": [1, "never"],
+        "no-debugger": 1,
+        "no-var": 1,
+        "semi": [2, "always"],
+        "no-trailing-spaces": 0,
+        "eol-last": 0,
+        "no-unused-vars": 1,
+        "no-underscore-dangle": 0,
+        "no-alert": 0,
+        "no-lone-blocks": 0,
+        "no-only-tests/no-only-tests": 2,
+        "no-prototype-builtins": 0,
+        "react/display-name": [
+            1,
+            {
+                "ignoreTranspilerName": false
+            }
+        ],
+        "react/forbid-prop-types": [
+            1,
+            {
+                "forbid": ["any"]
+            }
+        ],
+        "react/no-danger": 1,
+        "react/no-did-mount-set-state": 1,
+        "react/no-did-update-set-state": 1,
+        "react/no-direct-mutation-state": 1,
+        "react/no-multi-comp": 1,
+        "react/no-set-state": 0,
+        "react/no-unknown-property": 1,
+        "react/prefer-es6-class": 1,
+        "react/prop-types": 1,
+        "react/react-in-jsx-scope": 1,
+        "react/self-closing-comp": 1,
+        "react/sort-comp": 1,
+        "import/extensions": [1, { "json": 2, "css": 2, "mjs": 2 }],
+        "import/no-named-as-default": 0,
+        "import/no-unresolved": [2, { "ignore": ["react-native"] }],
+        "import/no-named-as-default-member": 0,
+        "react-hooks/rules-of-hooks": 2,
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                "additionalHooks": "(useScrollBoundary|useDebounce|useDoubleClick|useChainedPromiseQueue)"
+            }
+        ]
+    }
+}

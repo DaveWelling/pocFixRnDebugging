@@ -1,0 +1,1 @@
+export { default as Comp0 } from './comp0';

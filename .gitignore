@@ -1,0 +1,7 @@
+node_modules
+.gradle
+dist
+*.hprof
+
+silo_ui-web/src/server/scripts.js
+silo_ui-web/nginx-static-client.conf
