@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "linkToRepack": "node ./tools/link/linkToRepack.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -11,5 +12,8 @@
     "license": "ISC",
     "workspaces": [
         "./lib_ui-primitives"
-    ]
+    ],
+    "dependencies": {
+        "create-symlink": "^1.0.0"
+    }
 }
